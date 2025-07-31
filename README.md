@@ -5,7 +5,8 @@
 </p>
 
 ```yaml
-name: mmm404
+name: SAMUEL M. MAKAU  ~mmms
+Profession: Mechatronics Engineer
 focus: Embedded Programming • Data science • Hardware Design
 tools: Arduino | Python | Assembly | bash | C | CPP | Kicad,Altium,EasyEDA
 status: My projects shown below
