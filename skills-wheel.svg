@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="400">
+  <defs>
+    <style>
+      @keyframes spinAndPause {
+        0%, 15%   { transform: rotate(0deg); }
+        20%, 35%  { transform: rotate(-90deg); }
+        40%, 55%  { transform: rotate(-180deg); }
+        60%, 75%  { transform: rotate(-270deg); }
+        80%, 100% { transform: rotate(-360deg); }
+      }
+      @keyframes flashPointer {
+        0%, 100% { stroke: #ff3300; filter: drop-shadow(0 0 2px #ff3300); }
+        50% { stroke: #00FFBB; filter: drop-shadow(0 0 8px #00FFBB); }
+      }
+      .wheel-core {
+        transform-origin: 250px 250px;
+        animation: spinAndPause 16s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+      }
+      .pointer {
+        animation: flashPointer 2s infinite;
+      }
+      text {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        font-size: 13px;
+        fill: #8b949e;
+        font-weight: bold;
+      }
+      .highlight {
+        fill: #00FFBB;
+        font-size: 14px;
+      }
+    </style>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0d1117" rx="10"/>
+  <circle cx="250" cy="250" r="230" fill="none" stroke="#161b22" stroke-width="2" stroke-dasharray="5,5"/>
+  <circle cx="250" cy="250" r="190" fill="none" stroke="#161b22" stroke-width="1"/>
+
+  <g class="wheel-core">
+    <line x1="250" y1="60" x2="250" y2="440" stroke="#161b22" stroke-width="2"/>
+    <line x1="60" y1="250" x2="440" y2="250" stroke="#161b22" stroke-width="2"/>
+
+    <g transform="rotate(0, 250, 250)">
+      <circle cx="250" cy="90" r="6" fill="#00FFBB"/>
+      <text x="250" y="120" text-anchor="middle" class="highlight">0x01 // EMBEDDED FIRMWARE</text>
+      <text x="250" y="140" text-anchor="middle">C++ / C / BARE METAL</text>
+      <text x="250" y="155" text-anchor="middle">RFID CLOCKING SYSTEM</text>
+      <text x="250" y="170" text-anchor="middle">BIOMETRIC VALIDATION</text>
+    </g>
+
+    <g transform="rotate(90, 250, 250)">
+      <circle cx="250" cy="90" r="6" fill="#00a8ff"/>
+      <text x="250" y="120" text-anchor="middle" class="highlight" style="fill: #00a8ff;">0x02 // MECHATRONICS</text>
+      <text x="250" y="140" text-anchor="middle">ROS2 / KINEMATICS / PYTHON</text>
+      <text x="250" y="155" text-anchor="middle">PEGASUS 5-DOF ROBOT ARM</text>
+    </g>
+
+    <g transform="rotate(180, 250, 250)">
+      <circle cx="250" cy="90" r="6" fill="#ffaa00"/>
+      <text x="250" y="120" text-anchor="middle" class="highlight" style="fill: #ffaa00;">0x03 // HW / POWER DESIGN</text>
+      <text x="250" y="140" text-anchor="middle">ALTIUM / KICAD / EASYEDA</text>
+      <text x="250" y="155" text-anchor="middle">PCB ROUTING &amp; TOPOLOGIES</text>
+    </g>
+
+    <g transform="rotate(270, 250, 250)">
+      <circle cx="250" cy="90" r="6" fill="#ff3300"/>
+      <text x="250" y="120" text-anchor="middle" class="highlight" style="fill: #ff3300;">0x04 // SYSTEM AUTOMATION</text>
+      <text x="250" y="140" text-anchor="middle">CNN IMAGE CLASSIFICATION</text>
+      <text x="250" y="155" text-anchor="middle">ALGORITHMIC TRADING BOTS</text>
+    </g>
+  </g>
+
+  <circle cx="250" cy="250" r="40" fill="#0d1117" stroke="#161b22" stroke-width="3"/>
+  <circle cx="250" cy="250" r="10" fill="#00FFBB"/>
+  
+  <path d="M 230 40 L 270 40 L 250 75 Z" fill="#161b22" class="pointer" stroke-width="1"/>
+  <line x1="250" y1="20" x2="250" y2="55" stroke="#ff3300" stroke-width="3" class="pointer"/>
+</svg>
