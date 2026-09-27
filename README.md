@@ -33,7 +33,7 @@
 | **Intake Controller** | Multi-actuator subsystem controller for a robotics platform — 5 DC motors, 3 steppers, 4 solenoid valves, CAN bus | STM32G474, KiCad |
 | **Ultrasonic Gas Sensor** | Cylinder-mounted gas level monitor with RFID refill authorization and GPS/cellular tracking, coin-cell powered | TDC1000/TDC7200, SIM7080G, ESP |
 
-*(Add repo links here as individual projects go public.)*
+
 
 ---
 
